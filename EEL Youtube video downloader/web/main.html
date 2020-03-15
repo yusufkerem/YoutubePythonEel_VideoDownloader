@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <title>Youtube Video Downloader</title>
+    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="main.html" class="login-form">
+        <h1>Youtube Video Downloader</h1>
+        <div class="txtb">
+            <input type="text" id="data">
+            <span data-placeholder="Enter The Video Link"></span>
+        </div>
+        <input type="submit" class="logbtn" value="Download" onclick="downloadVideo()">
+
+        <div class="bottom-text">
+            Made by Yusuf Kerem Çalıkoğlu
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        $(".txtb input").on("focus",function(){
+            $(this).addClass("focus");
+        })
+
+        $(".txtb input").on("blur",function(){
+            if($(this).val() == "")
+            $(this).removeClass("focus");
+        })
+
+    </script>
+
+    
+</body>
+</html>
